@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidStudio_RectangularArea</string>
+
+    <string name="side_a">辺A</string>
+    <string name="side_b">辺B</string>
+    <string name="action_settings">Settings</string>
+</resources>
