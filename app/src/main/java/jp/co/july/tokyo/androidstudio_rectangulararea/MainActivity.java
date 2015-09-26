@@ -4,13 +4,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button calcBtn;
+    private TextView calcResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        calcBtn = (Button) findViewById(R.id.calcBtn);
+        calcResult = (TextView) findViewById(R.id.calcResult);
+        calcBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                calcResult.setText("aaa");
+            }
+        });
     }
 
     @Override
