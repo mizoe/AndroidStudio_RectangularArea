@@ -17,16 +17,17 @@
             <TextView android:text="@string/side_a" android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
-                android:textSize="50dp" />
+                android:textSize="40dp" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:ems="10"
-                android:id="@+id/editText"
+                android:id="@+id/side_a"
                 android:layout_weight="1"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:textSize="40dp" />
 
         </TableRow>
 
@@ -43,32 +44,33 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="0dp"
-                android:textSize="50dp" />
+                android:textSize="40dp" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:ems="10"
-                android:id="@+id/editText2"
+                android:id="@+id/side_b"
                 android:layout_weight="1"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:textSize="40dp"
+                />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp">
-
+            android:layout_marginTop="40dp">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="計算"
                 android:id="@+id/calcBtn"
-                android:layout_column="1"
-                android:textSize="40dp"
-                android:onClick="setContentView" />
+                android:layout_column="0"
+                android:onClick="setContentView"
+                android:textSize="40dp" />
         </TableRow>
 
         <TableRow
@@ -76,18 +78,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:text="面積"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView3"
-                android:layout_below="@+id/tableRow"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="40dp"
-                android:textSize="50dp" />
-
-            <TextView
-                android:text="？"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/calcResult"
@@ -95,7 +86,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="40dp"
-                android:textSize="50dp"
+                android:textSize="40dp"
+                android:layout_span="2"
                 android:layout_marginLeft="20dp" />
         </TableRow>
 

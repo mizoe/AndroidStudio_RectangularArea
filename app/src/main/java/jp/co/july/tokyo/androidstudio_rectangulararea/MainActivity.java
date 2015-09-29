@@ -6,22 +6,39 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button calcBtn;
-    private TextView calcResult;
+    private TextView calcResultTV;
+    private EditText sideAET;
+    private EditText sideBET;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         calcBtn = (Button) findViewById(R.id.calcBtn);
-        calcResult = (TextView) findViewById(R.id.calcResult);
+        calcResultTV = (TextView) findViewById(R.id.calcResult);
+        sideAET = (EditText) findViewById(R.id.side_a);
+        sideBET = (EditText) findViewById(R.id.side_b);
         calcBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                calcResult.setText("aaa");
+                try{
+                    Double side_a = Double.parseDouble(sideAET.getText().toString());
+                    Double side_b = Double.parseDouble(sideBET.getText().toString());
+                    Double area = side_a * side_b;
+                    calcResultTV.setText(side_a.toString() + " x " + side_b.toString() + " = " + area.toString());
+                    /*
+                    String a = sideAET.getText().toString();
+                    String b = sideBET.getText().toString();
+                    calcResultTV.setText(a + " x " + b + " = ");
+                    */
+                }catch(Exception e){
+                }
             }
         });
     }
